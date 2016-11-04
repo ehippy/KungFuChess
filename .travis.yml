@@ -5,7 +5,7 @@ deploy:
   local-dir: static
   acl: public_read
   on:
-    repo: ehippy/kungfuchess
+    repo: ehippy/KungFuChess
   access_key_id:
     secure: tJaonznvLFIzbLXY/ms5QWl8BIUJHFyRY0fmvjm3c1qPxJ7rfT4gHwg4KTx1ZhNRL/kzUCrTEBdX6Phg4ygrUOrTIMmMzHKWn7ynEwfIOt4DDyKux6N5Wy3rC0ye2i1kyMn2vidO9DkIoV/owIyFfdojnSV7VBkyIciHJekHkXmGrkAzBeRUkHg6r6W+rgHoAwzkWhQriYWe/VSQ6/aL7UjK19gOKVVuVDM6i05k8z+gxOxGgINcpum6qa8LPbl3jabHmXApS7CLj22ezJe8n7tbWFlo1hk61scJIt/+ABCSyWjUrE2MYxlf2s0BKCOOF3+Vm+kHrM3MfbMWoNU9VkCzA/EGDclhMV7KOsbzQW1t7dRyIg9GJOJL9r2Y61Pp3F05u7OpdsWKScs3w83y1zxBsZNeB+95RjKgRAOLo6aLwgFe0Ul3kTpRktmc+P7gj87yB+zcyHsMY+zaI6beab9/YCyHb4dQw2eSl1lDVZyF3q49uXTNBnXmR5EnsD8XLuKtPryn0+UW2VlWO75HUwFWUIg57ziUQsEwcv5ZB3hvXbGIQl/3Skz2cH2Gu5kpzsmyBYJe5jOMDSq31b6pcumReNeOzj0KHwMECExQqfH6EUhrv6FAW9KzVS21Rpl1Mk86L7xuOmYaNYpZQieBYnFsrAJaGXy+rYGByDrJisc=
   secret_access_key:
