@@ -1,3 +1,4 @@
+language: node_js
 deploy:
   provider: s3
   bucket: kungfuchess.net
