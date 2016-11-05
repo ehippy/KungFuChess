@@ -1,7 +1,13 @@
 var board,
     game = new Chess(),
     timers = {},
-    gameState;
+    gameState,
+    playerColor = 'w';
+
+
+var setAlwaysMyTurn = function(){
+    game.setTurn(playerColor);
+};
 
 var removeGreySquares = function() {
     $('#board .square-55d63').css('background', '');
@@ -19,6 +25,7 @@ var greySquare = function(square) {
 };
 
 var onDragStart = function(source, piece) {
+    setAlwaysMyTurn();
     // do not pick up pieces if the game is over
     // or if it's not that side's turn
     if (game.game_over() === true) {
@@ -29,12 +36,15 @@ var onDragStart = function(source, piece) {
 var onDrop = function(source, target) {
     removeGreySquares();
 
+    setAlwaysMyTurn();
+
     // see if the move is legal
     var move = game.move({
         from: source,
         to: target,
         promotion: 'q' // NOTE: always promote to a queen for example simplicity
     });
+    setAlwaysMyTurn();
 
     // illegal move
     if (move === null) return 'snapback';
@@ -42,6 +52,9 @@ var onDrop = function(source, target) {
 
 var onMouseoverSquare = function(square, piece) {
     // get list of possible moves for this square
+
+    setAlwaysMyTurn();
+
     var moves = game.moves({
         square: square,
         verbose: true
@@ -65,6 +78,7 @@ var onMouseoutSquare = function(square, piece) {
 
 var onSnapEnd = function() {
     board.position(game.fen());
+    setAlwaysMyTurn();
 };
 
 var cfg = {
