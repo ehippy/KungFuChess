@@ -44,6 +44,11 @@ var onDrop = function(source, target) {
         to: target,
         promotion: 'q' // NOTE: always promote to a queen for example simplicity
     });
+
+    if (move.captured === 'k') {
+        alert('you win!');
+    }
+
     setAlwaysMyTurn();
 
     // illegal move
